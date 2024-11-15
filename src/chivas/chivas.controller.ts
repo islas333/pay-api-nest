@@ -16,24 +16,25 @@ export class ChivasController {
 
   @Get()
   findAll() {
-    return this.chivasService.findAll();
+    // return this.chivasService.findAll();
+    return 'hola';
   }
 
-  @Post()
-  create(@Body() newChiva: { id: number; first_name: string; email: string }) {
-    return this.chivasService.create(newChiva);
-  }
+  // @Post()
+  // create(@Body() newChiva: { id: number; first_name: string; email: string }) {
+  //   return this.chivasService.create(newChiva);
+  // }
 
-  @Put(':id')
-  update(
-    @Param('id') id: number,
-    @Body() updatedChiva: { first_name?: string; email?: string },
-  ) {
-    return this.chivasService.update(id, updatedChiva);
-  }
+  // @Put(':id')
+  // update(
+  //   @Param('id') id: number,
+  //   @Body() updatedChiva: { first_name?: string; email?: string },
+  // ) {
+  //   return this.chivasService.update(id, updatedChiva);
+  // }
 
-  @Delete(':id')
-  delete(@Param('id', ParseIntPipe) id: number) {
-    return this.chivasService.delete(id);
-  }
+  // @Delete(':id')
+  // delete(@Param('id', ParseIntPipe) id: number) {
+  //   return this.chivasService.delete(id);
+  // }
 }
